@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:08:03 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/08 21:03:46 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/08 22:51:32 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/09 01:41:56 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int input)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if ((input >= 0 && input <= 9) || (input >= 'A' && input <= 'Z')
-		|| (input >= 'a' && input <= 'z'))
-		return (1);
-	return (0);
+	int i;
+
+	i = 0;
+	while (i < n)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		i++;
+	}
+	((char *)dest)[i] = '\0';
+	return (dest);
 }
+
+/*
+int main()
+{
+	char src[] = "merhabadeneme";
+	char dest[] = "sekn";
+	ft_memcpy(dest, src, 5);
+	printf("%s", dest);
+}*/

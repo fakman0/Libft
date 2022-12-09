@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:08:03 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/08 21:03:46 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/08 22:26:49 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/08 22:48:43 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int input)
+void ft_bzero(void *s, size_t n)
 {
-	if ((input >= 0 && input <= 9) || (input >= 'A' && input <= 'Z')
-		|| (input >= 'a' && input <= 'z'))
-		return (1);
-	return (0);
+	int counter;
+
+	counter = 0;
+	while (counter < n)
+	{
+		((unsigned char *)s)[counter] = '\0';
+		counter++;
+	}
 }
+
+/*
+int main()
+{
+	char dizi[] = "merhaba";
+	ft_bzero(dizi, 3);
+	printf("%s", dizi);
+}
+*/

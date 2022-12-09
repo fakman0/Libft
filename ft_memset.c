@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:08:03 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/08 21:03:46 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/08 21:14:24 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/08 22:54:44 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int input)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if ((input >= 0 && input <= 9) || (input >= 'A' && input <= 'Z')
-		|| (input >= 'a' && input <= 'z'))
-		return (1);
-	return (0);
+	int	counter;
+
+	counter = 0;
+	while (counter < len)
+	{
+		((unsigned char *)b)[counter]= c;
+		counter++;
+	}
+	return (b);
 }
+
+/*
+int main()
+{
+	char	str[] = "merhaba";
+	printf("%s", ft_memset(str ,'a',3));
+}
+*/
