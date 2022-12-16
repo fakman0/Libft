@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/15 17:32:46 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/15 17:56:06 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (!dest && !src)
-		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
+	int	i;
+
+	i = 0;
+	while (((char *)s)[i] != '\0' && n > 0)
 	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+		if (((char *)s)[i] == (char)c)
+			return (&((char *)s)[i]);
+		i++;
+		n--;
 	}
-	return (dest);
+	return ((void *) NULL);
 }
 
-int main()
+/*int main()
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
-}
+	char s1[] = "teste";
+	printf("%s\n", ft_memchr(s1,'s',3));
+}*/

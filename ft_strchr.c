@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/15 14:36:19 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/15 14:51:57 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	if (!dest && !src)
-		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
-	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
-	}
-	return (dest);
-}
-
-int main()
-{
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
+	while (*s && *s != (char)c)
+		s++;
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

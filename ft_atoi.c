@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/16 09:51:07 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/16 10:58:46 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+static int	ft_isspace(char c)
 {
-	if (!dest && !src)
-		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
-	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
-	}
-	return (dest);
+	if (c >= 9 && c <= 13 || c == ' ')
+		return (1);
+	return (0);
 }
 
-int main()
+int	atoi(const char *str)
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
+	int	i;
+	int	sign;
+	int	res;
+
+	sign = 1;
+	i = 0;
+	str = (char *)str;
+	if (str[i] == '-')
+	{
+		sign = sign * -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]) == 1 && str[i] != '\0')
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	return (res * sign);
 }

@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/15 17:56:11 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/16 02:44:10 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (!dest && !src)
-		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
+	int	i;
+
+	i = 0;
+	while (n > 0)
 	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+		if (((char *)s1)[i] != ((char *)s2)[i])
+		{
+			return (((char *)s1)[i] - ((char *)s2)[i]);
+		}
+		i++;
+		n--;
 	}
-	return (dest);
+	return (0);
 }
 
+/*
 int main()
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
+	char s1[] ="deneme";
+	char s2[] ="dename";
+	printf("%d", ft_memcmp(s1,s2,5));
 }
+*/

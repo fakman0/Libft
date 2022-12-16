@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/16 11:38:02 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/16 11:57:36 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	if (!dest && !src)
+	char	*res;
+	size_t	s_len;
+
+	s_len = ft_strlen(s1);
+	res = malloc(sizeof(char) * s_len + 1);
+	if (!res)
 		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
-	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
-	}
-	return (dest);
+	ft_memcpy(res, s1, s_len + 1);
+	return (res);
 }
 
+/*
 int main()
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
+	char test[] = "deneeme";
+	printf("%s", ft_strdup(test));
 }
+*/

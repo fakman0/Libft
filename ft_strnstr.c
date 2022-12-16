@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/16 02:52:42 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/16 09:50:51 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (!dest && !src)
-		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
+	int	i;
+	int	j;
+
+	i = 0;
+	while (haystack[i] && len > i)
 	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+		j = 0;
+		while (haystack[i + j] == needle[j] && (i + j) < len)
+		{
+			j++;
+			if (needle[j] == '\0')
+				return (&((char *)haystack)[i]);
+		}
+		i++;
 	}
-	return (dest);
+	return ((char *)haystack);
 }
 
-int main()
+/*int main()
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
-}
+	char dest[] = "denemeyazi123";
+	char src[] = "yazi";
+	printf("%s", ft_strnstr(dest,src,9));
+}*/
