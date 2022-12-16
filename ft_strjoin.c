@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 22:51:32 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/09 01:41:56 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/16 14:34:17 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/16 15:08:13 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
+	char	*result;
+	size_t	len;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (i < n)
+	j = 0;
+	s1 = (char *)s1;
+	s2 = (char *)s2;
+	len = ft_strlen(s1) + ft_strlen(s2);
+	result = (char *)malloc((sizeof(char) * len) + 1);
+	while (s1[i])
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		result[i] = s1[i];
 		i++;
 	}
-	((char *)dest)[i] = '\0';
-	return (dest);
+	while (s2[i])
+	{
+		result[i] = s2[j];
+		i++;
+		j++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
-/*
 int main()
 {
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memcpy(dest, src, 5);
-	printf("%s", dest);
-}*/
+	char s1[] = "den";
+	char s2[] = "se";
+	printf("%s", ft_strjoin(s1,s2));
+}
