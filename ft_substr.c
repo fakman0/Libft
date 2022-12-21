@@ -1,45 +1,45 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 14:09:11 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 14:34:03 by fakman           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/* ************************************************************************************** */
+/*                                                                                        */
+/*                                                                   :::      ::::::::    */
+/*   ft_substr.c                                                   :+:      :+:    :+:    */
+/*                                                               +:+ +:+         +:+      */
+/*   By: fakman <fakman@student.42kocaeli.com.tr>              +#+  +:+       +#+         */
+/*                                                           +#+#+#+#+#+   +#+            */
+/*   Created: 0002/12/16 14:34:03 by man                          #+#    #+#              */
+/*   Updated: 2022/12/20 14:33:32 by fakman                      ###   ########.tr        */
+/*                                                                                        */
+/* ************************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*src;
-	char	*dst;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	src = (char *)s;
-	dst = (char *)malloc(sizeof(src) * (len + 1));
-	if (!src)
+	str = (char*)malloc(sizeof(*s) * (len + 1));
+	if (!str)
 		return (NULL);
-	while (src[i])
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
 		if (i >= start && j < len)
 		{
-			dst[j] = src[i];
+			str[j] = s[i];
 			j++;
 		}
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	str[j] = 0;
+	return (str);
 }
 
-/*
-int main()
+
+/*int main()
 {
 	char s[] ="denemeyazi123";
-	printf("%s", ft_substr(s,4,8));
+	printf("%s", ft_substr(s,4,5));
 }
 */
