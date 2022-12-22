@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 16:57:02 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 17:25:50 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 12:20:18 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 12:23:37 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
 
@@ -26,10 +27,11 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
 
-int main()
+/*int main()
 {
 	char s1[] = "teste";
 	char s2[] = "testt";
 	printf("%d\n", ft_strncmp(s1,s2,5));
 	printf("%d", strncmp(s1,s2,5));
 }
+*/

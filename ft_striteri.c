@@ -1,50 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 14:34:17 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:25:54 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 13:49:49 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 14:12:16 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*result;
-	size_t	len;
 	int		i;
-	int		j;
+	size_t	s_len;
 
 	i = 0;
-	j = 0;
-	s1 = (char *)s1;
-	s2 = (char *)s2;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc((sizeof(char) * len) + 1);
-	while (s1[i])
+	s_len = ft_strlen(s);
+	while (i < s_len)
 	{
-		result[i] = s1[i];
+		f(i, &s[i]);
 		i++;
 	}
-	while (s2[i])
-	{
-		result[i] = s2[j];
-		i++;
-		j++;
-	}
-	result[i] = '\0';
-	return (result);
+	s[i] = '\0';
 }
 
 /*
+void	f_plus(unsigned int i, char *c)
+{
+	char	str;
+	*c = *c + 1;
+}
+
 int main()
 {
-	char s1[] = "den";
-	char s2[] = "se";
-	printf("%s", ft_strjoin(s1,s2));
+	char str1[] = "abc";
+	ft_striteri(str1, f_plus);
+	printf("%s\n", str1);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:43:29 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 14:37:10 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 12:25:32 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	unsigned int	d;
 
 	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src)); // size dst'den küçük olursa ekleme yapılamayacağı için kontrol olarak return değeri verilir
+		return (size + ft_strlen(src));
 	c = ft_strlen(dest);
 	d = 0;
 	while (src[d] != '\0' && c + 1 < size)
@@ -28,10 +28,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		d++;
 	}
 	dest[c] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[d])); // & o karakterden itibaren geri kalan kısımın getirilmesini sağlar
+	return (ft_strlen(dest) + ft_strlen(&src[d]));
 }
-
-
 
 /*int main(void)
 {

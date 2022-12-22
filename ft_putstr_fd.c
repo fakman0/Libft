@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 14:34:17 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:25:54 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 14:27:03 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 14:35:50 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*result;
-	size_t	len;
-	int		i;
-	int		j;
+	int	i;
+	int	s_len;
 
+	s_len = ft_strlen(s);
 	i = 0;
-	j = 0;
-	s1 = (char *)s1;
-	s2 = (char *)s2;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc((sizeof(char) * len) + 1);
-	while (s1[i])
+	while (i < s_len)
 	{
-		result[i] = s1[i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	while (s2[i])
-	{
-		result[i] = s2[j];
-		i++;
-		j++;
-	}
-	result[i] = '\0';
-	return (result);
 }
 
 /*
-int main()
+int	main()
 {
-	char s1[] = "den";
-	char s2[] = "se";
-	printf("%s", ft_strjoin(s1,s2));
+	int	fd;
+	fd = open("new.txt", O_WRONLY | O_RDONLY | O_CREAT, 777);
+	ft_putstr_fd("deneme", fd);
 }
 */

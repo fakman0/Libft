@@ -1,50 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 14:34:17 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:25:54 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 17:19:09 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 17:41:39 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstnew(void *content)
 {
-	char	*result;
-	size_t	len;
-	int		i;
-	int		j;
+	t_list	*res;
 
-	i = 0;
-	j = 0;
-	s1 = (char *)s1;
-	s2 = (char *)s2;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc((sizeof(char) * len) + 1);
-	while (s1[i])
-	{
-		result[i] = s1[i];
-		i++;
-	}
-	while (s2[i])
-	{
-		result[i] = s2[j];
-		i++;
-		j++;
-	}
-	result[i] = '\0';
-	return (result);
+	res = (t_list *)malloc(sizeof(t_list) * 1);
+
+	res->content = content;
+	res->next = NULL;
+	return (res);
 }
 
 /*
 int main()
 {
-	char s1[] = "den";
-	char s2[] = "se";
-	printf("%s", ft_strjoin(s1,s2));
+	char	*s = "test";
+	
+	printf("%s", ft_lstnew((void *)"test")->content);
 }
 */

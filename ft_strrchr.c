@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 14:53:31 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 16:56:33 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 12:19:22 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 12:23:11 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 	return ((char *) '\0');
 }
 
+/*
 int main()
 {
 	char s[] = "deneme";
 	printf("%s", ft_strrchr("yusuf",'u'));
 }
+*/

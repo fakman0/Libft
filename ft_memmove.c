@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:06:02 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 12:26:53 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 
+/*
 int main()
 {
 	char src[] = "merhabadeneme";
@@ -33,3 +34,4 @@ int main()
 	ft_memmove(dest, src, 10);
 	printf("%s", dest);
 }
+*/

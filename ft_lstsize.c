@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:28:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 18:17:59 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 18:38:18 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 18:49:29 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
-{
-	if (c >= 9 && c <= 13 || c == ' ')
-		return (1);
-	return (0);
-}
-
-int	atoi(const char *str)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	int	sign;
-	int	res;
 
-	sign = 1;
-	i = 0;
-	str = (char *)str;
-	if (str[i] == '-')
+	while (lst != NULL)
 	{
-		sign = sign * -1;
+		lst = lst->next;
 		i++;
 	}
-	while (ft_isdigit(str[i]) == 1 && str[i] != '\0')
-	{
-		res = res * 10 + (str[i] - 48);
-		i++;
-	}
-	return (res * sign);
+	return (i);
 }

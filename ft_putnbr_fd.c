@@ -1,50 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 14:34:17 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:25:54 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 15:17:59 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 16:29:56 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*result;
-	size_t	len;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	s1 = (char *)s1;
-	s2 = (char *)s2;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc((sizeof(char) * len) + 1);
-	while (s1[i])
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n == 2147483647)
+		ft_putstr_fd("2147483647", fd);
+	else if (n < 0)
 	{
-		result[i] = s1[i];
-		i++;
+		write(fd, "-", 1);
+		ft_putnbr_fd(n * -1, fd);
 	}
-	while (s2[i])
+	else if (n < 10)
 	{
-		result[i] = s2[j];
-		i++;
-		j++;
+		ft_putchar_fd(n + 48, fd);
 	}
-	result[i] = '\0';
-	return (result);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }
 
 /*
 int main()
 {
-	char s1[] = "den";
-	char s2[] = "se";
-	printf("%s", ft_strjoin(s1,s2));
+	int	fd;
+	fd = open("new.txt", O_WRONLY | O_RDONLY | O_CREAT, 777);
+	ft_putnbr_fd(-24532, fd);
 }
 */

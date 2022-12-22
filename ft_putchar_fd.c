@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:28:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 18:17:59 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 14:12:53 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 14:26:35 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 9 && c <= 13 || c == ' ')
-		return (1);
-	return (0);
+	write(fd, &c, 1);
 }
 
-int	atoi(const char *str)
+/*
+int	main()
 {
-	int	i;
-	int	sign;
-	int	res;
-
-	sign = 1;
-	i = 0;
-	str = (char *)str;
-	if (str[i] == '-')
-	{
-		sign = sign * -1;
-		i++;
-	}
-	while (ft_isdigit(str[i]) == 1 && str[i] != '\0')
-	{
-		res = res * 10 + (str[i] - 48);
-		i++;
-	}
-	return (res * sign);
+	int	fd;
+	fd = open("new.txt", O_WRONLY | O_RDONLY | O_CREAT, 777);
+	ft_putchar_fd('c', fd);
 }
+*/

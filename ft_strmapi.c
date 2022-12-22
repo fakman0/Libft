@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:21:37 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:23:25 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 12:52:08 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 13:48:02 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char*))
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	char	*res;
+	int		i;
+	size_t	s_len;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	if (!s || !f)
+		return (NULL);
+	s_len = ft_strlen(s);
+	res = (char *)malloc(sizeof(char) * (s_len + 1));
+	while (i < s_len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		res[i] = f(i, s[i]);
 		i++;
 	}
-	str[j] = 0;
-	return (str);
+	res[i] = '\0';
+	return (res);
 }
+
+/*char	f_plus(unsigned int i, char c)
+{
+	char str;
+	str = c + 1;
+	return (str);
+}*/
 
 /*int main()
 {
-	char s[] ="denemeyazi123";
-	printf("%s", ft_substr(s,4,5));
-}
-*/
+	char str1[] = "abc";
+	char* str2;
+	str2 = ft_strmapi(str1, *f_plus);
+	printf("%s\n", str2);
+}*/

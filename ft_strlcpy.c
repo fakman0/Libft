@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 10:10:44 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:08:33 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 18:27:30 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	index;
 
-    index = 0;
+	index = 0;
 	if (dstsize > 0)
 	{
 		while (index < (dstsize - 1) && src[index] != '\0')
 		{
-            dst[index] = src[index];
+			dst[index] = src[index];
 			index++;
 		}
 	}

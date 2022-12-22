@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:28:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 18:17:59 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 17:41:58 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/22 18:37:03 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 9 && c <= 13 || c == ' ')
-		return (1);
-	return (0);
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 
-int	atoi(const char *str)
+/*
+int main()
 {
-	int	i;
-	int	sign;
-	int	res;
+	t_list	*res;
+	t_list	*res1;
 
-	sign = 1;
-	i = 0;
-	str = (char *)str;
-	if (str[i] == '-')
-	{
-		sign = sign * -1;
-		i++;
-	}
-	while (ft_isdigit(str[i]) == 1 && str[i] != '\0')
-	{
-		res = res * 10 + (str[i] - 48);
-		i++;
-	}
-	return (res * sign);
+	res = ft_lstnew("test");
+	res1 = ft_lstnew("test2");
+	ft_lstadd_front(&res, res1);
+	printf("%s", res);
 }
+*/

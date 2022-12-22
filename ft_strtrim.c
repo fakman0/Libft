@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:10:36 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 16:42:57 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 12:22:39 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
+/*
 int main()
 {
 	char s1[] = "abcdenemeabc";
 	char set[] = "bca";
 	printf("%s", ft_strtrim(s1, set));
 }
+*/

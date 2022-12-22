@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:51:32 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 03:07:58 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 12:27:21 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < n)
@@ -25,7 +25,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	((char *)dest)[i] = '\0';
 	return (dest);
 }
-
 
 /*int main()
 {
