@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:19:58 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 18:59:10 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 23:41:21 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 

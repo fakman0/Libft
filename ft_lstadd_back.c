@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 19:01:51 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 19:08:56 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/22 23:41:11 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		ft_lstlast(*lst)->next = new;
 }
-
+/*
 int main()
 {
 	t_list *list = (t_list*)malloc(sizeof(t_list));
@@ -37,4 +37,4 @@ int main()
 		printf("%d\n", (int)list->content);
 		list = list->next;
 	}
-}
+}*/

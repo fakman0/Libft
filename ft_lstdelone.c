@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 17:19:09 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 00:36:42 by fakman           ###   ########.fr       */
+/*   Created: 2022/12/22 19:56:19 by fakman            #+#    #+#             */
+/*   Updated: 2022/12/23 00:07:50 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	t_list	*res;
-
-	res = (t_list *)malloc(sizeof(t_list) * 1);
-	res->content = content;
-	res->next = NULL;
-	return (res);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
 
-/*
-int main()
+void	del(void	*c)
 {
-	char	*s = "test";
+	int	i;
 	
-	printf("%s", ft_lstnew((void *)"test")->content);
+	i = 0;
+	while (((char *)c)[i] != '\0')
+	{
+		((char *)c)[i] = 0;
+		i++;
+	}
 }
-*/
+
+int main(void)
+{
+	t_list	*lst;
+	
+	lst = ft_lstnew(ft_strdup("çalış"));
+	lst->next = ft_lstnew(ft_strdup("amk"));
+	lst->next->next = ft_lstnew(ft_strdup("kodu"));
+	
+	ft_lstdelone(lst, del);
+}
