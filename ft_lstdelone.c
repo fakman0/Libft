@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 19:56:19 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 00:07:50 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 09:13:25 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
-void	del(void	*c)
-{
-	int	i;
-	
-	i = 0;
-	while (((char *)c)[i] != '\0')
-	{
-		((char *)c)[i] = 0;
-		i++;
-	}
-}
+// void	del(void	*c)
+// {
+// 	int	i;
 
+// 	i = 0;
+// 	while (((char *)c)[i] != '\0')
+// 	{
+// 		((char *)c)[i] = 0;
+// 		i++;
+// 	}
+// }
+
+/*
 int main(void)
 {
 	t_list	*lst;
@@ -42,3 +43,4 @@ int main(void)
 	
 	ft_lstdelone(lst, del);
 }
+*/

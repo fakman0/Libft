@@ -6,13 +6,13 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:27:41 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:29:14 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 12:28:22 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_digits(int n)
+static int	ft_find_digit(int n)
 {
 	int	digit;
 
@@ -27,53 +27,53 @@ static int	ft_digits(int n)
 
 static char	*ft_neg_itoa(int n)
 {
-	char	*res;
+	char	*result;
 	int		i;
 	int		j;
 	int		pos;
 
 	pos = (n * -1);
-	j = ft_digits(pos) + 1;
-	i = ft_digits(pos);
-	res = (char *)malloc(sizeof(char) * (ft_digits(pos + 2)));
-	if (!res)
+	j = ft_find_digit(pos) + 1;
+	i = ft_find_digit(pos);
+	result = (char *)malloc(sizeof(char) * (ft_find_digit(pos) + 2));
+	if (!result)
 		return (NULL);
 	while (i != -1)
 	{
-		res[i] = (pos % 10) + 48;
+		result[i] = (pos % 10) + 48;
 		pos /= 10;
 		i--;
 	}
-	res[j] = '\0';
-	res[0] = '-';
-	return (res);
+	result[j] = '\0';
+	result[0] = '-';
+	return (result);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*res;
+	char	*result;
 	int		i;
 	int		j;
 
-	j = ft_digits(n);
-	i = ft_digits(n) - 1;
+	j = ft_find_digit(n);
+	i = ft_find_digit(n) - 1;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == -0)
 		return (ft_strdup("0"));
 	if (n < 0)
 		return (ft_neg_itoa(n));
-	res = malloc(sizeof(char) * (ft_digits(n) + 1));
-	if (!res)
+	result = (char *)malloc(sizeof(char) * (ft_find_digit(n) + 1));
+	if (!result)
 		return (NULL);
 	while (i != -1)
 	{
-		res[i] = (n % 10) + 48;
+		result[i] = (n % 10) + 48;
 		n /= 10;
 		i--;
 	}
-	res[j] = '\0';
-	return (res);
+	result[j] = '\0';
+	return (result);
 }
 
 /*

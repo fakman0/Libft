@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:14:24 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 12:54:11 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 11:06:27 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int	counter;
+	size_t	counter;
 
 	counter = 0;
 	while (counter < len)

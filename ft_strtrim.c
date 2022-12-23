@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:10:36 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:22:39 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 12:24:52 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	s1 = (char *)s1;
 	set = (char *)set;
+	start = 0;
 	while (s1[start] && ft_check(s1[start], set))
 		start++;
 	while (end > start && ft_check(s1[end - 1], set))
@@ -50,6 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		index++;
 		start++;
 	}
+	str[index] = '\0';
 	return (str);
 }
 

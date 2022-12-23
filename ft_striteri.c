@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 13:49:49 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 14:12:16 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 12:15:06 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
-	size_t	s_len;
+	size_t		i;
+	size_t		s_len;
 
 	i = 0;
 	s_len = ft_strlen(s);

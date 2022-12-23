@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 02:52:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 09:50:51 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 11:55:52 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,37 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	char	*k1;
+	char	*k2;
+	size_t	i;
+	int		a;
 
 	i = 0;
-	while (haystack[i] && len > i)
+	a = 0;
+	k1 = (char *)haystack;
+	k2 = (char *)needle;
+	if (k2[i] == '\0')
+		return (k1);
+	while (k1[i] != '\0' && i < len)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
+		while (k1[i] == k2[a] && i + 1 <= len)
 		{
-			j++;
-			if (needle[j] == '\0')
-				return (&((char *)haystack)[i]);
+			if (k2[a + 1] == '\0')
+				return (&k1[i - a]);
+			a++;
+			i++;
 		}
+		i = i - a;
+		a = 0;
 		i++;
 	}
-	return ((char *)haystack);
+	return (0);
 }
 
-/*int main()
+/*
+int main()
 {
 	char dest[] = "denemeyazi123";
 	char src[] = "yazi";
-	printf("%s", ft_strnstr(dest,src,9));
+	printf("%s", ft_strnstr(dest,src,8));
 }*/

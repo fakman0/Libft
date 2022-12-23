@@ -6,7 +6,7 @@
 /*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:08:03 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/08 21:03:46 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 11:31:48 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int input)
 {
-	if ((input >= 0 && input <= 9) || (input >= 'A' && input <= 'Z')
+	if ((input >= '0' && input <= '9') || (input >= 'A' && input <= 'Z')
 		|| (input >= 'a' && input <= 'z'))
 		return (1);
 	return (0);
