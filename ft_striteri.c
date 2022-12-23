@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 13:49:49 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 12:15:06 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:25 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 	s[i] = '\0';
 }
-
-/*
-void	f_plus(unsigned int i, char *c)
-{
-	char	str;
-	*c = *c + 1;
-}
-
-int main()
-{
-	char str1[] = "abc";
-	ft_striteri(str1, f_plus);
-	printf("%s\n", str1);
-}
-*/

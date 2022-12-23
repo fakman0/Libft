@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:26:16 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:26:30 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:01 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,3 @@ char	**ft_split(char const *s, char c)
 	ft_allocate(new, s, c);
 	return (new);
 }
-
-/*
-int main()
-{
-    char *str = "merhaba,ben,furkan";
-    printf("%s", ft_split(str,','));
-}
-*/

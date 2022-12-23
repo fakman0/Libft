@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 02:52:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:55:52 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:59 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*
-int main()
-{
-	char dest[] = "denemeyazi123";
-	char src[] = "yazi";
-	printf("%s", ft_strnstr(dest,src,8));
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 10:10:44 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:36:54 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:40 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		index++;
 	return (index);
 }
-
-/*int main()
-{
-    char dst[] ="merhaba";
-    char src[] ="selam";
-    printf("%lu", strlcpy(dst, src, 5));
-    printf("%s", dst);
-}*/

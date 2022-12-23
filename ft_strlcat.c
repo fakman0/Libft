@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 11:43:29 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:45:11 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:35 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	dest[c] = '\0';
 	return (ft_strlen(dest) + ft_strlen(&src[d]));
 }
-
-/*int main(void)
-{
-    char s1[] = "Hello";
-    char s2[] = "World!";
-	printf("ft_strcat :: %s :: %lu\n", s1, ft_strlcat(s1, s2,8));
-}*/

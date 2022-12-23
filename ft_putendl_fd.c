@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 15:03:10 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 15:17:33 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:42 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-/*int	main()
-{
-	int	fd;
-	fd = open("new.txt", O_WRONLY | O_RDONLY | O_CREAT, 777);
-	ft_putendl_fd("deneme", fd);
-}
-*/

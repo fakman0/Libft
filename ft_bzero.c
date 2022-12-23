@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:26:49 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:06:06 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:43:35 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ void	ft_bzero(void *s, size_t n)
 		counter++;
 	}
 }
-
-/*
-int main()
-{
-	char dizi[] = "merhaba";
-	ft_bzero(dizi, 3);
-	printf("%s", dizi);
-}
-*/

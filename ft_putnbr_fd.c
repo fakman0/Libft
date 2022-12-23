@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 15:17:59 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 16:29:56 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:51 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-/*
-int main()
-{
-	int	fd;
-	fd = open("new.txt", O_WRONLY | O_RDONLY | O_CREAT, 777);
-	ft_putnbr_fd(-24532, fd);
-}
-*/

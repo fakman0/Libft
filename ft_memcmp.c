@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:56:11 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:31:07 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:17 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (us1[i] - us2[i]);
 }
-
-/*
-int main()
-{
-	char s1[] ="deneme";
-	char s2[] ="dename";
-	printf("%d", ft_memcmp(s1,s2,5));
-}
-*/

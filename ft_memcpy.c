@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:51:32 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:23:15 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:22 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main()
-{
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memcpy(dest + 2, dest +, 5);
-	printf("%s", dest);
-}*/

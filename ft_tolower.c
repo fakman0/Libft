@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:32:52 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 14:36:31 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:47:15 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-/*int main()
-{
-	printf("%d", ft_tolower('a'));
-}*/

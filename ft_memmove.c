@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:26:53 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:28 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
-
-/*
-int main()
-{
-	char src[] = "merhabadeneme";
-	char dest[] = "sekn";
-	ft_memmove(dest, src, 10);
-	printf("%s", dest);
-}
-*/

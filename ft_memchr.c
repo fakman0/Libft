@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:32:46 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:24:29 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:45:12 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return ((void *) NULL);
 }
-
-/*int main()
-{
-	char s1[] = "teste";
-	printf("%s\n", ft_memchr(s1,'s',3));
-}*/

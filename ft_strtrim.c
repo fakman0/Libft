@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:10:36 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 12:24:52 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:47:08 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check(char c, char const *set)
+static int	ft_check_set(char c, char const *set)
 {
 	int	i;
 
@@ -33,33 +33,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		index;
 
-	end = ft_strlen(s1);
-	s1 = (char *)s1;
-	set = (char *)set;
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
-	while (s1[start] && ft_check(s1[start], set))
+	end = ft_strlen(s1);
+	while (s1[start] && ft_check_set(s1[start], set))
 		start++;
-	while (end > start && ft_check(s1[end - 1], set))
+	while (end > start && ft_check_set(s1[end - 1], set))
 		end--;
 	str = (char *)malloc(sizeof(char) * (end - start) + 1);
 	if (!str)
 		return (NULL);
 	index = 0;
 	while (start < end)
-	{
-		str[index] = s1[start];
-		index++;
-		start++;
-	}
+		str[index++] = s1[start++];
 	str[index] = '\0';
 	return (str);
 }
-
-/*
-int main()
-{
-	char s1[] = "abcdenemeabc";
-	char set[] = "bca";
-	printf("%s", ft_strtrim(s1, set));
-}
-*/

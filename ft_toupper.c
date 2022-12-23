@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:24:52 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/15 14:32:15 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:47:18 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-/*int main()
-{
-	printf("%d", ft_toupper('a'));
-}*/

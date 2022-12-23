@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:19:22 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/22 12:23:11 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:47:02 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((char *) '\0');
 }
-
-/*
-int main()
-{
-	char s[] = "deneme";
-	printf("%s", ft_strrchr("yusuf",'u'));
-}
-*/

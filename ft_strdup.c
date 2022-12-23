@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 11:38:02 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/16 11:57:36 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:14 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(res, s1, s_len + 1);
 	return (res);
 }
-
-/*
-int main()
-{
-	char test[] = "deneeme";
-	printf("%s", ft_strdup(test));
-}
-*/

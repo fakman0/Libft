@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:52:08 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 11:09:19 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:46:49 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ret[i] = '\0';
 	return (ret);
 }
-
-/*char	f_plus(unsigned int i, char c)
-{
-	char str;
-	str = c + 1;
-	return (str);
-}*/
-
-/*int main()
-{
-	char str1[] = "abc";
-	char* str2;
-	str2 = ft_strmapi(str1, *f_plus);
-	printf("%s\n", str2);
-}*/

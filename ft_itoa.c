@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fakman <student@42.tr>                     +#+  +:+       +#+        */
+/*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 12:27:41 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 12:28:22 by fakman           ###   ########.fr       */
+/*   Updated: 2022/12/23 15:48:07 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,3 @@ char	*ft_itoa(int n)
 	result[j] = '\0';
 	return (result);
 }
-
-/*
-int	main()
-{
-	printf(ft_itoa(-12345));
-}
-*/
