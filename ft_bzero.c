@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 22:26:49 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:43:35 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:19:44 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:19:44 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	counter;
+	int	i;
 
-	counter = 0;
-	while (counter < n)
+	i = 0;
+	while (n > 0)
 	{
-		((unsigned char *)s)[counter] = '\0';
-		counter++;
+		((unsigned char *)s)[i] = '\0';
+		i++;
+		n--;
 	}
 }

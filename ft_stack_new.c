@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_stack_new.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 19:22:41 by fakman            #+#    #+#             */
-/*   Updated: 2023/02/24 19:22:41 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:22:07 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:22:07 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+t_stack	*ft_stack_new(int num)
 {
-	unsigned int	c;
-	unsigned int	d;
+	t_stack	*new;
 
-	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	c = ft_strlen(dest);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < size)
-	{
-		dest[c] = src[d];
-		c++;
-		d++;
-	}
-	dest[c] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[d]));
+	new = (t_stack *)malloc(sizeof(t_stack));
+	if (!new)
+		return (NULL);
+	new->num = num;
+	new->tag = 0;
+	new->next = NULL;
+	return (new);
 }

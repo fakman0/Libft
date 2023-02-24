@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 17:19:09 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:45:02 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:21:02 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:21:02 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*res;
+	t_list	*ptr;
 
-	res = (t_list *)malloc(sizeof(t_list) * 1);
-	if (!res)
-		return (0);
-	res->content = content;
-	res->next = NULL;
-	return (res);
+	ptr = (t_list *)malloc(sizeof(t_list));
+	if (!ptr)
+		return (NULL);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
 }

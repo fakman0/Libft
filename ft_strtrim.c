@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 15:10:36 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:47:08 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:23:39 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:23:39 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ static int	ft_check_set(char c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		if (set[i] == c)
+		if (set[i++] == c)
 			return (1);
-		i++;
 	}
 	return (0);
 }

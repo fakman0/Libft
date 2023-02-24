@@ -5,22 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 11:38:02 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:46:14 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:22:26 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:22:26 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *str)
 {
-	char	*res;
-	size_t	s_len;
+	char	*str2;
+	size_t	len;
 
-	s_len = ft_strlen(s1);
-	res = malloc(sizeof(char) * s_len + 1);
-	if (!res)
+	len = ft_strlen(str);
+	str2 = (char *)malloc(len + 1);
+	if (!(str2))
+	{
 		return (NULL);
-	ft_memcpy(res, s1, s_len + 1);
-	return (res);
+	}
+	ft_memcpy(str2, str, len + 1);
+	return (str2);
 }

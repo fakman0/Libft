@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 11:12:35 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:43:45 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:19:47 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:19:47 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*result;
+	void	*ret;
 
-	result = malloc(count * size);
-	if (result)
-		ft_bzero(result, count * size);
-	return (result);
+	ret = malloc(count * size);
+	if (ret)
+		ft_bzero(ret, count * size);
+	return (ret);
 }

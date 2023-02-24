@@ -5,26 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 10:10:44 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:46:40 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:23:10 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:23:10 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	index;
 
 	index = 0;
-	if (dstsize > 0)
+	if (size > 0)
 	{
-		while (index < (dstsize - 1) && src[index] != '\0')
+		while (index < (size - 1) && src[index])
 		{
-			dst[index] = src[index];
+			dest[index] = src[index];
 			index++;
 		}
-		dst[index] = '\0';
+		dest[index] = '\0';
 	}
 	while (src[index])
 		index++;

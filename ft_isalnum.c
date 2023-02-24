@@ -5,17 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:08:03 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:43:48 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:20:02 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:20:02 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int input)
+int	ft_isalnum(int c)
 {
-	if ((input >= '0' && input <= '9') || (input >= 'A' && input <= 'Z')
-		|| (input >= 'a' && input <= 'z'))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

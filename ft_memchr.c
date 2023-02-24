@@ -5,22 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 17:32:46 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:45:12 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:21:11 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:21:11 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *ptr, int c, size_t n)
 {
-	int	i;
+	int				i;
+	unsigned char	*s;
 
+	s = (unsigned char *)ptr;
 	i = 0;
 	while (n > 0)
 	{
-		if (((char *)s)[i] == (char)c)
-			return (&((char *)s)[i]);
+		if (s[i] == (unsigned char)c)
+			return (&s[i]);
 		i++;
 		n--;
 	}

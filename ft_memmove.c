@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 01:52:38 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:45:28 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:21:25 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:21:25 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (!dest && !src)
+	if (!dst && !src)
 		return (NULL);
-	if (dest < src)
-		ft_memcpy(dest, src, len);
-	else if (dest > src)
+	if (dst < src)
+		ft_memcpy(dst, src, n);
+	else if (dst > src)
 	{
-		while (len--)
-			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+		while (n--)
+			*((unsigned char *)(dst + n)) = *((unsigned char *)(src + n));
 	}
-	return (dest);
+	return (dst);
 }

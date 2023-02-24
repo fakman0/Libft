@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:27:33 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:47:57 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:20:10 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:20:10 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int input)
+int	ft_isascii(int c)
 {
-	if (input <= 127 && input >= 0)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

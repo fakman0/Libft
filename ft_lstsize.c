@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 18:38:18 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:48:26 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:21:06 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:21:06 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	size_t	n;
 
-	i = 0;
+	n = 0;
 	while (lst != NULL)
 	{
 		lst = lst->next;
-		i++;
+		n++;
 	}
-	return (i);
+	return (n);
 }

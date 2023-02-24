@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 14:49:36 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:44:01 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:20:14 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:20:14 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-int	ft_isdigit(int num)
+int	ft_isdigit(int c)
 {
-	if (num >= '0' && num <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

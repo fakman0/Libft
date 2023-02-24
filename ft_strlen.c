@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:52:24 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:46:42 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:23:14 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:23:14 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	counter;
+	int	i;
 
-	counter = 0;
-	while (s[counter] != '\0')
-		counter++;
-	return (counter);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

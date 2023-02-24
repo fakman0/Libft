@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:28:42 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:50:23 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:19:40 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:19:40 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "limits.h"
 
 static int	ft_isspace(char c)
 {
@@ -21,26 +22,27 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	res;
+	int				i;
+	int				sign;
+	unsigned long	result;
 
 	sign = 1;
+	result = 0;
 	i = 0;
-	res = 0;
-	str = (char *)str;
 	while (ft_isspace(str[i]))
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (str[i] == '-')
-			sign = sign * -1;
-		i++;
+		if (str[i++] == '-')
+			sign *= -1;
 	}
-	while (ft_isdigit(str[i]) && str[i] != '\0')
+	while ((ft_isdigit(str[i]) == 1) && (str[i] != '\0'))
+		result = result * 10 + (str[i++] - 48);
+	if (result > LONG_MAX)
 	{
-		res = res * 10 + (str[i] - 48);
-		i++;
+		if (sign == -1)
+			return (0);
+		return (-1);
 	}
-	return (res * sign);
+	return (result * sign);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 13:49:49 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:46:25 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:22:31 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:22:31 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t		i;
-	size_t		s_len;
+	size_t	i;
 
 	i = 0;
-	s_len = ft_strlen(s);
-	while (i < s_len)
-	{
+	if (!s || !f)
+		return ;
+	while (i < ft_strlen(s))
+	{	
 		f(i, &s[i]);
 		i++;
 	}
-	s[i] = '\0';
 }

@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_stack_peek.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 19:22:41 by fakman            #+#    #+#             */
-/*   Updated: 2023/02/24 19:22:41 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:22:10 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:22:10 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+t_stack	*ft_stack_peek(t_stack **root)
 {
-	unsigned int	c;
-	unsigned int	d;
+	t_stack	*r_val;
 
-	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	c = ft_strlen(dest);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < size)
+	if (*root == NULL)
 	{
-		dest[c] = src[d];
-		c++;
-		d++;
+		ft_printf("Stack is empty!");
+		return (NULL);
 	}
-	dest[c] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[d]));
+	r_val = (t_stack *)malloc(sizeof(t_stack));
+	r_val->num = (*root)->num;
+	r_val->tag = (*root)->tag;
+	r_val->next = (*root)->next;
+	return (r_val);
 }

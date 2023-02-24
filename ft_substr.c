@@ -5,20 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 12:21:37 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:47:12 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:23:49 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:23:49 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*str;
 	char	*src;
 
-	i = 0;
 	src = (char *)s;
 	if (!src)
 		return (NULL);

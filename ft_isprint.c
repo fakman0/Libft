@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 15:43:11 by fakman            #+#    #+#             */
-/*   Updated: 2022/12/23 15:44:04 by fakman           ###   ########.fr       */
+/*   Created: 2023/02/24 19:20:18 by fakman            #+#    #+#             */
+/*   Updated: 2023/02/24 19:20:18 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int input)
+int	ft_isprint(int c)
 {
-	if (input >= 32 && input <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
