@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fakman <fakman@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 19:24:09 by fakman            #+#    #+#             */
-/*   Updated: 2023/02/24 19:24:09 by fakman           ###   ########.fr       */
+/*   Created: 2023/06/27 18:58:58 by fakman            #+#    #+#             */
+/*   Updated: 2023/06/27 18:58:58 by fakman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ typedef struct s_list
 
 typedef struct s_stack
 {
-	int				num;
- 	int				tag;
+	int				x;
+	int				y;
 	struct s_stack	*next;			
 }				t_stack;
 
@@ -57,7 +57,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *ptr, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *needle, size_t len);
-long		ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -102,8 +102,6 @@ char	*get_new_raw_str(char *raw_str);
 char	*get_next_line(int fd);
 //stack data type functions
 void	ft_stack_push(t_stack **root, t_stack *new);
-t_stack	*ft_stack_new(int num);
-int		ft_stack_pop(t_stack **root);
-void	ft_stack_clear(t_stack **stack);
-t_stack	*ft_stack_peek(t_stack **stack);
+t_stack	*ft_stack_new(int x, int y);
+t_stack	*ft_stack_pop(t_stack **root);
 #endif
