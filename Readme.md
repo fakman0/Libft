@@ -1,3 +1,6 @@
+## Purposes of Functions
+
+```
 ft_atoi.c: Converts a string representation of an integer to an integer value.<br>
 ft_bzero.c: Sets a block of memory to zero (null bytes).<br>
 ft_calloc.c: Allocates and initializes a block of memory with zeroed bytes.<br>
@@ -49,3 +52,4 @@ ft_strtrim.c: Trims leading and trailing whitespace characters from a string.<br
 ft_substr.c: Extracts a substring from a string, starting at a specified index and of a specified length.<br>
 ft_tolower.c: Converts an uppercase character to lowercase.<br>
 ft_toupper.c: Converts a lowercase character to uppercase.<br>
+```
